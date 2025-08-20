@@ -1,0 +1,17 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/configDB
+    username: postgres
+    password: admin
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  sql:
+    init:
+      mode: always
+
+security:
+  jwt:
+    secret: una_clave_secreta_super_segura_123456789012345
+    access-token-expiration-minutes: 15
+    refresh-token-expiration-days: 7
